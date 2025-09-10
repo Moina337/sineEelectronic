@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maquette Site</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- Ajouter un padding-top égal à la hauteur du header -->
+<body class="font-sans bg-gray-50 text-gray-800 pt-20">
+
+  <!-- Menu -->
+ <header class="bg-blue-600 text-white shadow-md fixed top-0 left-0 right-0 z-50">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <!-- Logo -->
+    <h1 class="text-xl font-bold">MonSite</h1>
+    
+    <!-- Menu desktop -->
+    <div class="hidden md:flex space-x-6 items-center translate-x-[383px]">
+      <a href="#" class="hover:text-gray-200">Accueil</a>
+      <a href="#" class="hover:text-gray-200">Produits</a>
+      <a href="#" class="hover:text-gray-200">À propos</a>
+      <a href="#"
+        class="bg-green-600 px-4 py-2 rounded-full flex items-center gap-2 hover:bg-green-700">
+        👤 Connexion
+      </a>
+    </div>
+
+    <!-- Panier -->
+    <button id="cart-btn" class="relative ml-4 translate-x-[83px] md:translate-x-[3px]">
+      🛒
+      <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-2 py-0.5 rounded-full">0</span>
+    </button>
+
+    <!-- Bouton hamburger (mobile) -->
+    <button id="menu-btn" class="md:hidden text-2xl ml-4">☰</button>
+  </div>
+
+  <!-- Menu mobile -->
+  <div id="mobile-menu" class="hidden flex flex-col space-y-2 bg-blue-600 text-white items-center p-4 md:hidden">
+    <a href="#" class="block w-full px-2 py-2 hover:text-gray-200">Accueil</a>
+    <a href="#" class="block w-full px-2 py-2 hover:text-gray-200">Produits</a>
+    <a href="#" class="block w-full px-2 py-2 hover:text-gray-200">À propos</a>
+    <a href="#"
+      class="bg-green-600 px-4 py-2 rounded-full flex items-center gap-2 hover:bg-green-700">
+      👤 Connexion
+    </a>
+  </div>
+</header>
+
+
+
+
+  <!-- Bloc du panier (statique avec articles) -->
+<div id="cart-block" class="hidden fixed h-full right-0 top-0 bg-white text-black shadow-lg w-80 p-4 z-50">
+  <div class="flex justify-between items-center border-b pb-2">
+    <h2 class="font-bold text-lg">🛒 Panier</h2>
+    <!-- ✅ Ajout de l'id -->
+    <button id="close-cart" class="text-red-600 font-bold text-lg hover:text-red-800">X</button>
+  </div>
+
+  <!-- Article 1 -->
+  <ul class="space-y-4 mt-4">
+    <li class="flex items-center gap-3 border-b pb-2">
+      <img src="1.webp" alt="HP" class="w-12 h-12 object-cover rounded">
+      <div class="flex-1">
+        <h3 class="font-semibold">Ordinateur HP</h3>
+        <p class="text-sm text-gray-500">150 000 CFA</p>
+        <div class="flex items-center gap-2 mt-1">
+          <button class="bg-gray-200 px-2 rounded">-</button>
+          <span>1</span>
+          <button class="bg-gray-200 px-2 rounded">+</button>
+        </div>
+      </div>
+    </li>
+
+    <!-- Article 2 -->
+    <li class="flex items-center gap-3 border-b pb-2">
+      <img src="2.webp" alt="Lenovo" class="w-12 h-12 object-cover rounded">
+      <div class="flex-1">
+        <h3 class="font-semibold">Lenovo ThinkPad</h3>
+        <p class="text-sm text-gray-500">200 000 CFA</p>
+        <div class="flex items-center gap-2 mt-1">
+          <button class="bg-gray-200 px-2 rounded">-</button>
+          <span>2</span>
+          <button class="bg-gray-200 px-2 rounded">+</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Total -->
+  <div class="mt-6 flex justify-between items-center border-t pt-4">
+    <span class="font-semibold">Total: 550 000 CFA</span>
+    <a href="#" class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">Commander</a>
+  </div>
+</div>
+
+
+  <script>
+    // Menu mobile
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Panier
+    const cartBtn = document.getElementById("cart-btn");
+    const cartBlock = document.getElementById("cart-block");
+    const closeCart = document.getElementById("close-cart");
+
+    cartBtn.addEventListener("click", () => {
+      cartBlock.classList.toggle("hidden");
+    });
+
+    closeCart.addEventListener("click", () => {
+      cartBlock.classList.add("hidden");
+    });
+  </script>
+
+</body>
+</html>

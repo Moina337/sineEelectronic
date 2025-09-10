@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maquette Site</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+  </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+  <!-- Menu -->
+  <header class="bg-blue-600 text-white shadow-md relative">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <!-- Logo -->
+      <h1 class="text-xl font-bold">MonSite</h1>
+      
+      <!-- Menu desktop -->
+      <div class="hidden md:flex space-x-6 items-center translate-x-[383px]">
+        <a href="#" class="hover:text-gray-200">Accueil</a>
+        <a href="#" class="hover:text-gray-200">Produits</a>
+        <a href="#" class="hover:text-gray-200">À propos</a>
+        <a href="#"
+          class="bg-green-600 px-4 py-2 rounded-full flex items-center gap-2 hover:bg-green-700">
+          👤 Connexion
+        </a>
+      </div>
+
+      <!-- Panier -->
+      <button id="cart-btn" class="relative ml-4 translate-x-[83px] md:translate-x-[3px]">
+        🛒
+        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-2 py-0.5 rounded-full">0</span>
+      </button>
+
+      <!-- Bouton hamburger (mobile) -->
+      <button id="menu-btn" class="md:hidden text-2xl ml-4">☰</button>
+    </div>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden flex flex-col space-y-2 bg-blue-600 text-white items-center p-4 md:hidden">
+      <a href="#" class="block w-full px-2 py-2 hover:text-gray-200">Accueil</a>
+      <a href="#" class="block w-full px-2 py-2 hover:text-gray-200">Produits</a>
+      <a href="#" class="block w-full px-2 py-2 hover:text-gray-200">À propos</a>
+      <a href="#"
+        class="bg-green-600 px-4 py-2 rounded-full flex items-center gap-2 hover:bg-green-700">
+        👤 Connexion
+      </a>
+    </div>
+  </header>
+   <section class="md:flex relative py-20 px-4 overflow-hidden">
+  <!-- Fond gradient -->
+  <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-green-600/20 z-[-1]"></div>
+
+  <!-- Texte à gauche -->
+  <div class="md:w-1/2 mb-6 md:mb-0">
+    <h2 class="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent text-4xl md:text-6xl font-bold mb-6">
+      SINE SALOUM ÉLECTRONIQUE
+    </h2>
+    <p class="text-xl md:text-2xl text-gray-600 mb-8">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est numquam, error beatae...
+    </p>
+    <div class="flex gap-4 flex-wrap">
+      <a href="#" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-all">
+        Voir plus
+      </a>
+      <button class="border-2 border-blue-600 text-blue-600 px-4 py-4 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-all">
+        📱 Télécharger l'app
+      </button>
+    </div>
+  </div>
+
+  <!-- Blocs images à droite -->
+  <div class="md:w-1/2 flex items-center gap-6">
+    <!-- Bloc 1 -->
+    <div class="w-[200px] md:w-[300px] flex flex-col justify-center items-center shadow-lg bg-white rounded p-4 rotate-12 translate-y-[63px]">
+      <div class="h-64 w-full bg-cover bg-center rounded mb-2" style="background-image: url('1.webp');"></div>
+      <h2 class="text-lg font-semibold mb-2">Ordinateur HP</h2>
+      <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition">
+        Voir plus
+      </button>
+    </div>
+
+    <!-- Bloc 2 -->
+    <div class="w-[200px] md:w-[300px] flex flex-col justify-center items-center shadow-lg bg-white rounded p-4 -rotate-12 translate-y-[33px]">
+      <div class="h-64 w-full bg-cover bg-center rounded mb-2" style="background-image: url('2.webp');"></div>
+      <h2 class="text-lg font-semibold mb-2">Ordinateur Dell</h2>
+      <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition">
+        Voir plus
+      </button>
+    </div>
+  </div>
+</section>
+<section class="md:flex items-center gap-8 p-6 bg-gray-50">
+  <!-- Texte -->
+  <div class="md:w-1/2">
+    <h2 class="text-3xl font-bold mb-4 text-blue-600">À propos de nous</h2>
+    <p class="text-gray-700 text-lg leading-relaxed">
+      Chez <span class="font-semibold">Sine Saloum Électronique</span>, nous proposons une large sélection
+      d’ordinateurs portables, de bureaux et d’accessoires adaptés à vos besoins.
+      Notre mission est de rendre la technologie accessible à tous, avec des produits
+      fiables, modernes et à des prix compétitifs.
+    </p>
+  </div>
+
+  <!-- Image -->
+  <div class="md:w-1/2 h-64 bg-cover bg-center rounded-lg shadow-lg" style="background-image: url('3.webp');"></div>
+</section>
+<section class="py-12 px-6 bg-gray-50">
+  <!-- Titre -->
+  <h2 class="text-3xl font-bold text-center text-blue-600 mb-8 uppercase">
+    Produits récents
+  </h2>
+
+  <!-- Grille des produits -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <!-- Produit 1 -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden p-4 text-center">
+      <a href="#">
+        <img src="1.webp" alt="Ordinateur HP" class="w-full h-40 object-cover mb-2 transition-transform duration-300 hover:scale-105">
+      </a>
+      <h3 class="text-sm font-semibold mb-1">Ordinateur HP</h3>
+      <p class="text-blue-600 font-bold mb-2">450.000 CFA</p>
+      <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition text-sm">
+        Voir plus
+      </button>
+    </div>
+
+    <!-- Produit 2 -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden p-4 text-center">
+      <a href="#">
+        <img src="2.webp" alt="Ordinateur Dell" class="w-full h-40 object-cover mb-2 transition-transform duration-300 hover:scale-105">
+      </a>
+      <h3 class="text-sm font-semibold mb-1">Ordinateur Dell</h3>
+      <p class="text-blue-600 font-bold mb-2">520.000 CFA</p>
+      <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition text-sm">
+        Voir plus
+      </button>
+    </div>
+
+    <!-- Produit 3 -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden p-4 text-center">
+      <a href="#">
+        <img src="3.webp" alt="Ordinateur Lenovo" class="w-full h-40 object-cover mb-2 transition-transform duration-300 hover:scale-105">
+      </a>
+      <h3 class="text-sm font-semibold mb-1">Ordinateur Lenovo</h3>
+      <p class="text-blue-600 font-bold mb-2">480.000 CFA</p>
+      <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition text-sm">
+        Voir plus
+      </button>
+    </div>
+
+    <!-- Produit 4 -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden p-4 text-center">
+      <a href="#">
+        <img src="4.webp" alt="Ordinateur Asus" class="w-full h-40 object-cover mb-2 transition-transform duration-300 hover:scale-105">
+      </a>
+      <h3 class="text-sm font-semibold mb-1">Ordinateur Asus</h3>
+      <p class="text-blue-600 font-bold mb-2">510.000 CFA</p>
+      <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition text-sm">
+        Voir plus
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-12 px-6 bg-gray-50">
+  <!-- Titre -->
+  <h2 class="text-3xl font-bold text-center text-blue-600 mb-8 uppercase">
+    Pourquoi nous choisir ?
+  </h2>
+  <p class="text-center text-gray-700 text-lg mb-12">
+    Chez <span class="font-semibold">Sine Saloum Électronique</span>, nous mettons la technologie à portée de tous.
+  </p>
+
+  <!-- Points forts -->
+  <div class="grid md:grid-cols-3 gap-8 text-center">
+    <!-- Point 1 -->
+    <div class="bg-white shadow-lg rounded-lg p-6">
+      <div class="text-4xl mb-4">💻</div>
+      <h3 class="font-semibold text-xl mb-2">Produits de qualité</h3>
+      <p class="text-gray-600">Nous sélectionnons les meilleurs ordinateurs et accessoires pour garantir fiabilité et performance.</p>
+    </div>
+
+    <!-- Point 2 -->
+    <div class="bg-white shadow-lg rounded-lg p-6">
+      <div class="text-4xl mb-4">⚡</div>
+      <h3 class="font-semibold text-xl mb-2">Livraison rapide</h3>
+      <p class="text-gray-600">Commandez en ligne et recevez vos produits rapidement avec un suivi efficace.</p>
+    </div>
+
+    <!-- Point 3 -->
+    <div class="bg-white shadow-lg rounded-lg p-6">
+      <div class="text-4xl mb-4">💰</div>
+      <h3 class="font-semibold text-xl mb-2">Prix compétitifs</h3>
+      <p class="text-gray-600">Nous offrons des tarifs attractifs sans compromis sur la qualité de nos produits.</p>
+    </div>
+  </div>
+</section>
+  <!-- Bloc du panier (caché au début) -->
+  <div id="cart-block" class="hidden fixed h-full right-0 top-0 bg-white text-black shadow-lg w-80 p-4 z-50 transition-transform">
+    <div class="flex justify-between items-center border-b pb-2">
+      <h2 class="font-bold text-lg">🛒 Panier</h2>
+      <button id="close-cart" class="text-red-600 font-bold text-lg hover:text-red-800">X</button>
+    </div>
+    
+    <p id="cart-empty" class="text-gray-500 text-sm mt-4">Votre panier est vide</p>
+    <ul id="cart-items" class="space-y-2 hidden"></ul>
+    
+    <div class="mt-6 flex justify-between items-center border-t pt-4">
+      <span class="font-semibold">Total: 0 CFA</span>
+      <a href="#" class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">Commander</a>
+    </div>
+  </div>
+ <footer class="bg-gray-800 text-gray-200 py-12 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+    
+    <!-- Qui nous sommes -->
+    <div>
+      <h2 class="text-xl font-bold mb-4 text-white">Qui nous sommes ?</h2>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        Chez <span class="font-semibold">Sine Saloum Électronique</span>, nous proposons des produits électroniques fiables et modernes, adaptés à vos besoins personnels et professionnels.
+      </p>
+    </div>
+
+    <!-- Liens utiles -->
+    <div>
+      <h2 class="text-xl font-bold mb-4 text-white">Liens utiles</h2>
+      <ul class="space-y-2 text-gray-300 text-sm">
+        <li><a href="#" class="hover:text-white transition">Accueil</a></li>
+        <li><a href="#" class="hover:text-white transition">Produits</a></li>
+        <li><a href="#" class="hover:text-white transition">À propos</a></li>
+        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Suivez-nous / Réseaux sociaux -->
+    <div>
+      <h2 class="text-xl font-bold mb-4 text-white">Suivez-nous</h2>
+      <div class="flex space-x-4 text-2xl">
+        <!-- Facebook -->
+        <a href="#" class="hover:text-blue-600 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 5 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.845c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.772-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 17 22 12z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="#" class="hover:text-pink-500 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm8 1a1 1 0 110 2 1 1 0 010-2zm-3 1a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+          </svg>
+        </a>
+
+        <!-- TikTok -->
+        <a href="#" class="hover:text-black transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M9 3v10a4 4 0 104 4h4V9h-2v6h-2a2 2 0 110-4h-2V3H9z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bas de page -->
+  <div class="mt-12 text-center text-gray-400 text-sm">
+    &copy; <span id="year"></span> Sine Saloum Électronique. Tous droits réservés.
+  </div>
+</footer>
+
+<script>
+  // Mettre l'année à jour automatiquement
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script>
+    // Menu mobile
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Panier
+    const cartBtn = document.getElementById("cart-btn");
+    const cartBlock = document.getElementById("cart-block");
+    const closeCart = document.getElementById("close-cart");
+
+    cartBtn.addEventListener("click", () => {
+      cartBlock.classList.toggle("hidden");
+    });
+
+    closeCart.addEventListener("click", () => {
+      cartBlock.classList.add("hidden");
+    });
+  </script>
+
+</body>
+</html>

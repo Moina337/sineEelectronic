@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détail Produit - Sine Saloum Électronique</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+   <style>
+    @keyframes fadeInUp{
+      from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+    }
+    
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(30px);
+}
+    .fadeInUp.visible{
+      
+      animation: fadeInUp 0.5s ease forwards;
+    }
+   </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <main class="max-w-6xl mx-auto p-6 md:flex md:gap-12">
+
+    <!-- Image du produit -->
+    <div class="md:w-1/2 fadeInUp" style="animation-delay: 0.2s">
+      <img src="1.webp" alt="Ordinateur HP" class="w-full h-auto rounded-lg shadow-lg">
+    </div>
+
+    <!-- Infos produit -->
+    <div class="md:w-1/2 mt-6 md:mt-0 flex flex-col justify-between">
+      <div>
+        <h1 class="text-3xl font-bold mb-4 fadeInUp" style="animation-delay: 0.4s">Ordinateur HP</h1>
+        <p class="text-gray-600 mb-4 fadeInUp" style="animation-delay: 0.6s">
+          Ordinateur portable performant pour usage professionnel et personnel. Processeur Intel i5, 8 Go RAM, 512 Go SSD.
+        </p>
+        <p class="text-2xl font-semibold text-blue-600 mb-6 fadeInUp" style="animation-delay: 0.8s">
+          450 000 CFA
+        </p>
+
+        <!-- Boutons d'action -->
+        <div class="flex gap-4 mb-6 fadeInUp" style="animation-delay: 1s">
+          <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+            Ajouter au panier
+          </button>
+          <button class="bg-gray-200 text-gray-800 px-6 py-2 rounded hover:bg-gray-300 transition">
+            Acheter maintenant
+          </button>
+        </div>
+      </div>
+
+      <!-- Description détaillée -->
+      <div class="mt-8 fadeInUp" style="animation-delay: 1.2s">
+        <h2 class="text-xl font-bold mb-2">Description</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Cet ordinateur HP est idéal pour le travail quotidien et le divertissement.
+          Équipé d'un écran Full HD, clavier rétroéclairé, et batterie longue durée.
+          Compact, léger et performant.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    const produit =document.querySelectorAll(".fadeInUp");
+  const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+ produit.forEach(box=>{
+  observer.observe(box);
+ })
+  </script>
+
+</body>
+</html>

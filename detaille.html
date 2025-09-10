@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détail Produit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+ 
+  @keyframes scroll-slow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-scroll-slow {
+    display: flex;
+    gap: 1.5rem;
+    animation: scroll-slow 20s linear infinite;
+    scroll-behavior: smooth;
+  }
+</style>
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Produit principal -->
+  <main class="max-w-4xl mx-auto p-6">
+    <div class="md:flex md:gap-12">
+      <!-- Image -->
+      <div class="md:w-1/2">
+        <img src="1.webp" alt="Ordinateur HP" class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+
+      <!-- Infos -->
+      <div class="md:w-1/2 mt-6 md:mt-0 flex flex-col justify-between">
+        <h1 class="text-3xl font-bold mb-4">Ordinateur HP</h1>
+        <p class="text-gray-600 mb-4">Ordinateur portable performant pour usage quotidien. Intel i5, 8 Go RAM, 512 Go SSD.</p>
+        <p class="text-2xl font-semibold text-blue-600 mb-6">450 000 CFA</p>
+
+        <div class="flex gap-4 mb-6">
+          <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Ajouter au panier</button>
+          <button class="bg-gray-200 text-gray-800 px-6 py-2 rounded hover:bg-gray-300 transition">Acheter maintenant</button>
+        </div>
+
+        <div class="mt-8">
+          <h2 class="text-xl font-bold mb-2">Description</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Cet ordinateur HP est idéal pour le travail quotidien et le divertissement. Équipé d'un écran Full HD, clavier rétroéclairé et batterie longue durée.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bloc des avis -->
+  <section class="max-w-6xl mx-auto mt-12 p-6 bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-4">Avis des clients</h2>
+
+    <div class="flex flex-col gap-4">
+      <!-- Avis 1 -->
+      <div class="flex justify-between items-start p-4 border rounded">
+        <div>
+          <p class="font-semibold">Amir</p>
+          <p class="text-gray-700">Très bon ordinateur, rapide et fiable !</p>
+        </div>
+        <button class="text-red-600 font-bold hover:text-red-800">Supprimer</button>
+      </div>
+
+      <!-- Avis 2 -->
+      <div class="flex justify-between items-start p-4 border rounded">
+        <div>
+          <p class="font-semibold">Fatou</p>
+          <p class="text-gray-700">Produit conforme à la description, livraison rapide.</p>
+        </div>
+        <button class="text-red-600 font-bold hover:text-red-800">Supprimer</button>
+      </div>
+    </div>
+  </section>
+
+ <!-- Bloc bas avec scroll dynamique et scroll manuel -->
+<section class="max-w-6xl mx-auto mt-12 p-6 bg-white rounded-lg shadow-lg overflow-x-auto">
+  <h2 class="text-2xl font-bold mb-4">Produits similaires</h2>
+  <div class="flex gap-6 min-w-max animate-scroll-slow">
+    <div class="min-w-[200px] rounded-lg overflow-hidden shadow-lg flex-shrink-0">
+      <img src="1.webp" alt="Produit 1" class="w-full h-40 object-cover">
+    </div>
+    <div class="min-w-[200px] rounded-lg overflow-hidden shadow-lg flex-shrink-0">
+      <img src="2.webp" alt="Produit 2" class="w-full h-40 object-cover">
+    </div>
+    <div class="min-w-[200px] rounded-lg overflow-hidden shadow-lg flex-shrink-0">
+      <img src="3.webp" alt="Produit 3" class="w-full h-40 object-cover">
+    </div>
+    <div class="min-w-[200px] rounded-lg overflow-hidden shadow-lg flex-shrink-0">
+      <img src="4.webp" alt="Produit 4" class="w-full h-40 object-cover">
+    </div>
+    <div class="min-w-[200px] rounded-lg overflow-hidden shadow-lg flex-shrink-0">
+      <img src="5.webp" alt="Produit 5" class="w-full h-40 object-cover">
+    </div>
+    <!-- Dupliquer pour boucle visuelle si besoin -->
+    <div class="min-w-[200px] rounded-lg overflow-hidden shadow-lg flex-shrink-0">
+      <img src="1.webp" alt="Produit 1" class="w-full h-40 object-cover">
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>
