@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maquette Site</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/animation.css">
   <style>
 
   </style>
@@ -15,28 +16,28 @@
     
     <!-- Qui nous sommes -->
     <div>
-      <h2 class="text-xl font-bold mb-4 text-white">Qui nous sommes ?</h2>
-      <p class="text-gray-300 text-sm leading-relaxed">
+      <h2 class="text-xl font-bold mb-4 text-white animate-fadeInUp">Qui nous sommes ?</h2>
+      <p class="text-gray-300 text-sm leading-relaxed animate-fadeInUp">
         Chez <span class="font-semibold">Sine Saloum Électronique</span>, nous proposons des produits électroniques fiables et modernes, adaptés à vos besoins personnels et professionnels.
       </p>
     </div>
 
     <!-- Liens utiles -->
     <div>
-      <h2 class="text-xl font-bold mb-4 text-white">Liens utiles</h2>
+      <h2 class="text-xl font-bold mb-4 text-white animate-fadeInUp">Liens utiles</h2>
       <ul class="space-y-2 text-gray-300 text-sm">
-        <li><a href="#" class="hover:text-white transition">Accueil</a></li>
-        <li><a href="#" class="hover:text-white transition">Produits</a></li>
-        <li><a href="#" class="hover:text-white transition">À propos</a></li>
-        <li><a href="#" class="hover:text-white transition">Contact</a></li>
-        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+        <li><a href="#" class="hover:text-white transition animate-fadeInUp">Accueil</a></li>
+        <li><a href="#" class="hover:text-white transition animate-fadeInUp">Produits</a></li>
+        <li><a href="#" class="hover:text-white transition animate-fadeInUp">À propos</a></li>
+        <li><a href="#" class="hover:text-white transition animate-fadeInUp">Contact</a></li>
+        <li><a href="#" class="hover:text-white transition animate-fadeInUp">FAQ</a></li>
       </ul>
     </div>
 
     <!-- Suivez-nous / Réseaux sociaux -->
     <div>
-      <h2 class="text-xl font-bold mb-4 text-white">Suivez-nous</h2>
-      <div class="flex space-x-4 text-2xl">
+      <h2 class="text-xl font-bold mb-4 text-white animate-fadeInUp">Suivez-nous</h2>
+      <div class="flex space-x-4 text-2xl animate-fadeInUp">
         <!-- Facebook -->
         <a href="#" class="hover:text-blue-600 transition">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -63,7 +64,7 @@
   </div>
 
   <!-- Bas de page -->
-  <div class="mt-12 text-center text-gray-400 text-sm">
+  <div class="mt-12 text-center text-gray-400 text-sm animate-fadeInUp">
     &copy; <span id="year"></span> Sine Saloum Électronique. Tous droits réservés.
   </div>
 </footer>
@@ -72,7 +73,7 @@
   // Mettre l'année à jour automatiquement
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
+<script src="js/animation.js"></script>
 
 </body>
 </html>

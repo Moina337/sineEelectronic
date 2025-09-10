@@ -1,0 +1,22 @@
+ /* Keyframes pour fadeInUp */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Classe initiale pour animation */
+    .animate-fadeInUp {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    /* Classe ajoutée quand l'élément est visible */
+    .animate-fadeInUp.visible {
+      animation: fadeInUp 0.8s ease forwards;
+    }

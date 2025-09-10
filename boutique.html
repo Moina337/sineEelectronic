@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produit - Sine Saloum Électronique</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/animation.css">
   <style>
     /* Animation du slider */
     @keyframes slide {
@@ -40,16 +41,16 @@
     <!-- Slider -->
     <div class="w-full h-full overflow-hidden">
       <div class="slider h-full">
-        <img src="1.webp" alt="Produit 1" class="slide object-cover h-full w-full">
-        <img src="2.webp" alt="Produit 2" class="slide object-cover h-full w-full">
-        <img src="7.webp" alt="Produit 3" class="slide object-cover h-full w-full">
-        <img src="4.webp" alt="Produit 4" class="slide object-cover h-full w-full">
+        <img src="images/1.webp" alt="Produit 1" class="slide object-cover h-full w-full">
+        <img src="images/2.webp" alt="Produit 2" class="slide object-cover h-full w-full">
+        <img src="images/7.webp" alt="Produit 3" class="slide object-cover h-full w-full">
+        <img src="images/4.webp" alt="Produit 4" class="slide object-cover h-full w-full">
       </div>
     </div>
 
     <!-- Message au centre -->
     <div class="absolute inset-0 flex items-center justify-center z-20">
-      <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-lg text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-lg text-center animate-fadeInUp">
         Découvrez davantage nos produits
       </h1>
     </div>
@@ -60,66 +61,66 @@
    
 
     <!-- Grille des produits -->
-    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
       <!-- Produit 1 -->
-      <div class="bg-white shadow rounded-lg p-4 flex flex-col">
-        <img src="1.webp" alt="Ordinateur HP" class="h-40 w-full object-cover rounded mb-4">
+      <div class="bg-white shadow rounded-lg p-4 flex flex-col animate-fadeInUp">
+        <img src="images/1.webp" alt="Ordinateur HP" class="h-40 w-full object-cover rounded mb-4">
         <h2 class="font-semibold text-lg mb-2">Ordinateur HP</h2>
         <p class="text-blue-600 font-bold mb-4">450 000 CFA</p>
         <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition">Voir détail</button>
       </div>
 
       <!-- Produit 2 -->
-      <div class="bg-white shadow rounded-lg p-4 flex flex-col">
-        <img src="2.webp" alt="Ordinateur Dell" class="h-40 w-full object-cover rounded mb-4">
+      <div class="bg-white shadow rounded-lg p-4 flex flex-col animate-fadeInUp">
+        <img src="images/2.webp" alt="Ordinateur Dell" class="h-40 w-full object-cover rounded mb-4">
         <h2 class="font-semibold text-lg mb-2">Ordinateur Dell</h2>
         <p class="text-blue-600 font-bold mb-4">520 000 CFA</p>
         <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition">Voir détail</button>
       </div>
 
       <!-- Produit 3 -->
-      <div class="bg-white shadow rounded-lg p-4 flex flex-col">
-        <img src="3.webp" alt="Ordinateur Lenovo" class="h-40 w-full object-cover rounded mb-4">
+      <div class="bg-white shadow rounded-lg p-4 flex flex-col animate-fadeInUp">
+        <img src="images/3.webp" alt="Ordinateur Lenovo" class="h-40 w-full object-cover rounded mb-4">
         <h2 class="font-semibold text-lg mb-2">Ordinateur Lenovo</h2>
         <p class="text-blue-600 font-bold mb-4">480 000 CFA</p>
         <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition">Voir détail</button>
       </div>
 
       <!-- Produit 4 -->
-      <div class="bg-white shadow rounded-lg p-4 flex flex-col">
-        <img src="4.webp" alt="Ordinateur Asus" class="h-40 w-full object-cover rounded mb-4">
+      <div class="bg-white shadow rounded-lg p-4 flex flex-col animate-fadeInUp">
+        <img src="images/4.webp" alt="Ordinateur Asus" class="h-40 w-full object-cover rounded mb-4">
         <h2 class="font-semibold text-lg mb-2">Ordinateur Asus</h2>
         <p class="text-blue-600 font-bold mb-4">510 000 CFA</p>
         <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition">Voir détail</button>
       </div>
 
       <!-- Produit 5 -->
-      <div class="bg-white shadow rounded-lg p-4 flex flex-col">
-        <img src="5.webp" alt="MacBook Pro" class="h-40 w-full object-cover rounded mb-4">
+      <div class="bg-white shadow rounded-lg p-4 flex flex-col animate-fadeInUp">
+        <img src="images/5.webp" alt="MacBook Pro" class="h-40 w-full object-cover rounded mb-4">
         <h2 class="font-semibold text-lg mb-2">MacBook Pro</h2>
         <p class="text-blue-600 font-bold mb-4">1 200 000 CFA</p>
         <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition">Voir détail</button>
       </div>
 
       <!-- Produit 6 -->
-      <div class="bg-white shadow rounded-lg p-4 flex flex-col">
-        <img src="6.webp" alt="Acer Aspire" class="h-40 w-full object-cover rounded mb-4">
+      <div class="bg-white shadow rounded-lg p-4 flex flex-col animate-fadeInUp">
+        <img src="images/6.webp" alt="Acer Aspire" class="h-40 w-full object-cover rounded mb-4">
         <h2 class="font-semibold text-lg mb-2">Acer Aspire</h2>
         <p class="text-blue-600 font-bold mb-4">400 000 CFA</p>
         <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition">Voir détail</button>
       </div>
 
       <!-- Produit 7 -->
-      <div class="bg-white shadow rounded-lg p-4 flex flex-col">
-        <img src="7.webp" alt="Samsung Galaxy Book" class="h-40 w-full object-cover rounded mb-4">
+      <div class="bg-white shadow rounded-lg p-4 flex flex-col animate-fadeInUp">
+        <img src="images/7.webp" alt="Samsung Galaxy Book" class="h-40 w-full object-cover rounded mb-4">
         <h2 class="font-semibold text-lg mb-2">Samsung Galaxy Book</h2>
         <p class="text-blue-600 font-bold mb-4">550 000 CFA</p>
         <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition">Voir détail</button>
       </div>
 
       <!-- Produit 8 -->
-      <div class="bg-white shadow rounded-lg p-4 flex flex-col">
-        <img src="8.jpeg" alt="MSI Gaming" class="h-40 w-full object-cover rounded mb-4">
+      <div class="bg-white shadow rounded-lg p-4 flex flex-col animate-fadeInUp">
+        <img src="images/8.jpeg" alt="MSI Gaming" class="h-40 w-full object-cover rounded mb-4">
         <h2 class="font-semibold text-lg mb-2">MSI Gaming</h2>
         <p class="text-blue-600 font-bold mb-4">950 000 CFA</p>
         <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition">Voir détail</button>
@@ -127,7 +128,7 @@
     </div>
 
     <!-- Pagination -->
-    <div class="flex justify-center mt-10 space-x-2">
+    <div class="flex justify-center mt-10 space-x-2 animate-fadeInUp">
       <a href="#" class="px-3 py-1 border rounded hover:bg-gray-200">Précédent</a>
       <a href="#" class="px-3 py-1 border bg-blue-600 text-white rounded">1</a>
       <a href="#" class="px-3 py-1 border rounded hover:bg-gray-200">2</a>
@@ -135,6 +136,6 @@
       <a href="#" class="px-3 py-1 border rounded hover:bg-gray-200">Suivant</a>
     </div>
   </main>
-
+  <script src="js/animation.js"></script>
 </body>
 </html>
